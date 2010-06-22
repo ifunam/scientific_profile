@@ -18,6 +18,8 @@ end
 
 group :development do
   gem "sqlite3-ruby"
+  gem "hpricot"
+  gem "ruby_parser"
   gem "rails_indexes", "0.0.0", :git => "git://github.com/eladmeidar/rails_indexes.git", :branch => "master"
 end
 

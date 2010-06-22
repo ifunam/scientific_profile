@@ -1,0 +1,9 @@
+%h2 ¿Olvidaste tu contraseña?
+= form_for(resource, :as => resource_name, :url => password_path(resource_name)) do |f|
+  = devise_error_messages!
+  %p
+    = f.label :email
+    %br/
+    = f.text_field :email
+  %p= f.submit "Enviar instrucciones para cambiar mi contraseña"
+= render :partial => "devise/shared/links"

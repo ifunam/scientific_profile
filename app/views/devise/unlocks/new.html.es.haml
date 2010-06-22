@@ -1,0 +1,9 @@
+%h2 Reenviar instrucciones para desbloquear cuenta
+= form_for(resource, :as => resource_name, :url => unlock_path(resource_name)) do |f|
+  = devise_error_messages!
+  %p
+    = f.label :email
+    %br/
+    = f.text_field :email
+  %p= f.submit "Reenviar instrucciones"
+= render :partial => "devise/shared/links"
