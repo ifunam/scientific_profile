@@ -25,3 +25,9 @@ group :test do
   gem "rspec-rails", ">= 2.0.0.beta.9.1"
   gem "sqlite3-ruby"
 end
+
+group :console do
+  gem "wirble"
+  gem "looksee", :require => "looksee/shortcuts"
+  gem "interactive_editor"
+end
