@@ -1,5 +1,4 @@
 source :gemcutter
-
 gem "rails", "3.0.0.beta4", :git => 'git://github.com/rails/rails.git', :branch => 'master'
 gem "devise", :git => 'git://github.com/plataformatec/devise.git', :branch => 'master'
 gem "compass", "0.10.2"
@@ -26,7 +25,9 @@ group :development do
 end
 
 group :test do
-  gem "rspec-rails", ">= 2.0.0.beta.9.1"
+  gem "rspec-rails", ">= 2.0.0.beta.12"
+  gem "remarkable_activemodel"
+  gem "remarkable_activerecord", ">= 4.0.0.alpha4"
   gem "sqlite3-ruby"
 end
 
