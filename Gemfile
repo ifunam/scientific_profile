@@ -10,7 +10,7 @@ gem "rmagick"
 gem "attribute_normalizer", :git => "http://github.com/mdeering/attribute_normalizer.git"
 gem "tzinfo"
 gem "vestal_versions", :git => "git@github.com:alecz/vestal_versions.git", :branch => 'rails3'
-
+gem "haml"
 gem "awesome_nested_set", "1.4.3", :git => "git://github.com/alecz/awesome_nested_set.git", :branch => "rails3"
 gem "inploy", :git => 'git://github.com/dcrec1/inploy.git', :branch => 'master'
 
