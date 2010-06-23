@@ -10,3 +10,5 @@ if defined?(ActionView)
     include CollectiveIdea::Acts::NestedSet::Helper
   end
 end
+
+require 'vestal_versions'
