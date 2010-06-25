@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   # GET /pages.xml
   respond_to :html
   def index
-    respond_with(@pages = Page.all)
+    respond_with(@pages = Page.all.paginate(:page => params[:page] || 1, :per_page => params[:per_page] || 10))
   end
 
   # GET /pages/1
@@ -26,13 +26,15 @@ class PagesController < ApplicationController
   # POST /pages
   # POST /pages.xml
   def create
-    respond_with(@page = Page.new(params[:page]), :status => :created, :location => @page)
+    respond_with(@page = Page.create(params[:page]), :status => :created)
   end
 
   # PUT /pages/1
   # PUT /pages/1.xml
   def update
-    respond_with(@page = Page.find(params[:id]), :status => :updated, :location => @page)
+    @page = Page.find(params[:id])
+    @page.update_attributes(params[:page])
+    respond_with(@page, :status => :updated)
   end
 
   # DELETE /pages/1
