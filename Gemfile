@@ -14,6 +14,7 @@ gem "haml"
 gem "RedCloth"
 gem "awesome_nested_set", "1.4.3", :git => "git://github.com/alecz/awesome_nested_set.git", :branch => "rails3"
 gem "inploy", :git => 'git://github.com/dcrec1/inploy.git', :branch => 'master'
+gem "simple_form", :git => 'git://github.com/plataformatec/simple_form.git'
 
 group :production do
   gem "pg"
