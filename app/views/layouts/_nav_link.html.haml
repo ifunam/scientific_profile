@@ -1,0 +1,4 @@
+- if nav_link.is_parent?
+  = render :partial => 'layouts/nav_parent', :object => nav_link
+- else
+  = render :partial => 'layouts/nav_child', :object => nav_link

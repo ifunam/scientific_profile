@@ -1,0 +1,6 @@
+%h2=t('.title')
+= form_for(@page, :html => {:multipart => true }) do |f|
+  = render :partial => 'form', :locals => { :f => f }
+  %div{:id => 'buttons', :class => 'span-22 prepend-1'}
+    = f.submit 'Guardar', :class => "ui-button ui-button-text-icon ui-widget ui-state-default ui-corner-all"
+    = link_to content_tag(:span, '', :class => 'ui-button-icon-primary ui-icon ui-icon-cancel') +  content_tag(:span, 'Cancelar', :class => "ui-button-text"), pages_path, :class => "ui-button ui-button-text-icon ui-widget ui-state-default ui-corner-all"

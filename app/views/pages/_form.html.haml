@@ -1,0 +1,9 @@
+%div{:class => 'span-22 last'}
+  = f.label :title
+  = f.text_field :title, :required => true
+%div{:class => 'span-22 last'}
+  = f.label :body
+  = f.text_area :body, :required => true, :size => "80x20", :id => "markItUp"
+%div{:class => 'span-22 last'}
+  = f.label :navlink_id
+  = f.collection_select :navlink_id, navlink_parents, :id, :title, { :prompt => true }

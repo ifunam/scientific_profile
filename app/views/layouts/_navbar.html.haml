@@ -1,0 +1,4 @@
+%div{:id => 'navbar', :class =>"fg-toolbar ui-widget-header ui-corner-all ui-helper-clearfix", :style => 'height: 50px;'}
+  %div{:id => 'menu'}
+    %ul{:class =>"menu"}
+      = render :partial => 'layouts/nav_link', :collection => Navlink.all_main_links

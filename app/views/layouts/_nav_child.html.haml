@@ -1,0 +1,7 @@
+%li
+  - if !nav_child.navlinkable.nil?
+    = link_to content_tag(:span, nav_child.title), page_path(:id => nav_child.navlinkable.id)
+  - elsif !nav_child.url.to_s.strip.empty?
+    = link_to content_tag(:span, nav_child.title), nav_child.url
+  - else
+    = link_to content_tag(:span, nav_child.title), "#"

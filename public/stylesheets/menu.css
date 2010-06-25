@@ -1,0 +1,137 @@
+/**
+ *********************************************
+ * Prototype of styles for horizontal CSS-menu
+ * @data 25.01.2010
+ *********************************************
+ * (X)HTML-scheme:
+ *  <div id="menu">
+ *      <ul class="menu">
+ *          <li><a href="#" class="parent"><span>level 1</span></a>
+ *              <div><ul>
+ *                  <li><a href="#" class="parent"><span>level 2</span></a>
+ *                      <div><ul><li><a href="#"><span>level 3</span></a></li></ul></div>
+ *                  </li>
+ *              </ul></div>
+ *          </li>
+ *          <li class="last"><a href="#"><span>level 1</span></a></li>
+ *      </ul>
+ *  </div>
+ *********************************************
+ */
+
+/* menu::base */
+#menu {
+    position:relative;
+    z-index:100;
+    height: 43px;
+}
+#menu .menu {
+    position:absolute;
+    padding-left: 40px;
+    background: url(/images/header.gif) right top no-repeat; 
+
+}
+#menu * {
+    list-style:none;
+    border:0;
+    padding:0;
+    margin:0;
+}
+#menu a {
+    display:block;
+    padding:15px 14px 14px 14px;
+    white-space:nowrap;rigth
+}
+#menu li {
+    float:left;
+    background:#fff;
+
+}
+#menu li li {
+    float:none;
+}
+#menu div {
+    visibility:hidden;
+    position:absolute;
+    background:url(/images/pix.gif);
+}
+#menu div div {
+    margin:-35px 0 0 -1px;
+    left:100%;
+}
+#menu div div div {
+    margin:-35px 0 0 -1px;
+    left:100%;
+}
+#menu li:hover>div { visibility:visible; }
+
+/* menu::special styles */
+/* menu::level 1 */
+#menu a {
+    text-decoration:none;
+    color:#ffffff;/*1*/
+    position:relative;
+    z-index:77;
+	width: 150px;
+}
+#menu a:hover {
+    background:url(/images/header.gif) left -43px repeat-x;
+    color:#FFF;
+}
+#menu a:hover span { color:#FFF; }
+#menu li.current a {
+    background: transparent url(/images/header_active.gif) repeat-x;
+    color:#3C4955;
+}
+#menu li.current span {
+    color: #fff;
+}
+#menu>ul>li:hover>a {
+	width: 150px;
+    background: #005161 url(/images/header.gif) left -43px repeat-x;
+    color:#005161;
+}
+#menu>ul>li:hover>a span { color:#FFF; }
+#menu span {
+    text-transform:uppercase;
+    font: 12px 'Lucida Grande','Lucida Sans Unicode',Arial,Verdana,sans-serif;
+    letter-spacing:0.3em;
+    text-decoration:none;
+    color:#ffffff;
+}
+#menu li { background: url(/images/header.gif) left top no-repeat;}
+/* menu::level >= 2 */
+#menu ul ul {width: 178px;}
+#menu li li{
+	  background:#005161;
+	  border-bottom:1px solid #006782;}
+#menu li li a {
+    position:static;
+    backgroundround:#005161;
+    white-space:normal;
+    text-align: left;
+    color:#FFF;
+    padding:0;
+	padding-left: 10px;
+	text-transform:none;
+	width: 95%;
+}
+#menu li.current li a {
+    background: none;
+    color:#FFF;
+}
+#menu li.current li span {
+    color:#FFF;
+}
+#menu li li a:hover { background:#006782;}
+#menu li li a span { color:#fff; line-height: 15px; padding: 10px;	}
+#menu li li a:hover span { color:#ffffff; }
+#menu li li a.parent span{background:transparent url(/images/arrow.gif) no-repeat scroll right 50%; z-index:10;}
+
+#menu li li span {
+    display:block;
+    text-transform:none;
+    padding:0px 25px 0px 0px;
+    font-size:12px;
+    letter-spacing: 0;
+}
