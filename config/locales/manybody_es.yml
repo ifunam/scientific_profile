@@ -1,0 +1,29 @@
+es:
+  activemodel:
+    models:
+      user: Usuario
+      person: Información personal
+      group: Grupo
+      navlink: Opción de navegación
+      page: Página
+      image: Imagen
+    attributes:
+      user:
+        login: Usuario
+        password: Contraseña
+        password_confirmation: Confirmación de la contraseña
+        userstatus: Estado del usuario
+        email: Correo electrónico
+      person:
+        firstname: Nombre(s)
+        lastname1: Apellido paterno
+        lastname2: Apellido materno
+        title: Título
+        gender: Género
+        birthdate: Fecha de nacimiento
+      page:
+        title: Título
+        body: Descripción
+        image: Imagen
+        navlink: Sección
+     

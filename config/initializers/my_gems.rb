@@ -1,5 +1,4 @@
 require 'awesome_nested_set'
-
 ActiveRecord::Base.class_eval do
   include CollectiveIdea::Acts::NestedSet
 end
@@ -12,3 +11,4 @@ if defined?(ActionView)
 end
 
 require 'vestal_versions'
+require 'carrierwave/orm/activerecord'

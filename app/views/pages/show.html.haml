@@ -1,3 +1,5 @@
 %h2{:style => 'text-align: left;'}=@page.title
 %div{:class => "span-24 justify_text last" }
+  = image_tag @page.image.file.url(:medium),  :class =>"top pull-1 left", :style => 'margin-right: 15px;' unless @page.image.nil?
   =raw textilize(@page.body)
+

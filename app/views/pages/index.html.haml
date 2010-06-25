@@ -1,0 +1,9 @@
+%h3='Páginas registradas'
+%div{ :id=>'collection', :class => 'span-24 last'}
+  %div{:id=> 'row_title', :class => 'span-24 last'}
+    %span='Title'
+    %span='Fotografía'
+    %span='Ver detalles'
+  = render :partial => @pages
+%div{:class => 'span-24 last'}
+  = will_paginate @pages

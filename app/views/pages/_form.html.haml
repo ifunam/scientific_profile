@@ -1,9 +1,13 @@
-%div{:class => 'span-22 last'}
-  = f.label :title
-  = f.text_field :title, :required => true
-%div{:class => 'span-22 last'}
-  = f.label :body
-  = f.text_area :body, :required => true, :size => "80x20", :id => "markItUp"
-%div{:class => 'span-22 last'}
-  = f.label :navlink_id
-  = f.collection_select :navlink_id, navlink_parents, :id, :title, { :prompt => true }
+= simple_form_for(@page, :html => {:multipart => true }) do |f|
+  %div{:class => 'span-22 last'}
+    = f.input :title
+  %div{:class => 'span-22 last'}
+    = f.input :body, :as => :text, :id => "markItUp"
+  %div{:class => 'span-22 last'}
+    = f.collection_select :navlink_section_id, Navlink.all_section_links, :id, :title_with_ancestors
+  %div{:class => 'span-22 last'}
+    = f.label :image
+    = f.fields_for :image_attributes do |image_form|
+      = image_form.file_field :file, :size => 20
+  %div{:class => 'span-22 last'}
+    = f.button :submit 

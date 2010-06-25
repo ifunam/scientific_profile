@@ -1,0 +1,5 @@
+%div{:class => 'row span-24 last'}
+  %span= page.title
+  %span= page.image.nil? ? '-' : image_tag(page.image.file.url(:icon))
+  %span= link_to 'Detalles', page_path(:id => page.id)
+  %span= link_to 'Borrar', page_path(:id => page.id), :method => :delete, :confirm => '¿ Desesas borrar este registo ?'
