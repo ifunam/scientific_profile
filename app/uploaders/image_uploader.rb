@@ -15,14 +15,14 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
 
   version :icon do
-    process :resize_to_fill => [48, 48]
+    process :resize_to_fit => [48, 48]
   end
 
   version :thumb do
-    process :resize_to_fill => [128, 128]
+    process :resize_to_fit => [128, 128]
   end
 
   version :medium do
-    process :resize_to_fill => [256, 256]
+    process :resize_to_fit => [256, 256]
   end
 end
