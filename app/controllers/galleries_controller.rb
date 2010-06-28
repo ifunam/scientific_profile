@@ -4,7 +4,7 @@ class GalleriesController < ApplicationController
   # GET /galleries
   # GET /galleries.xml
   def index
-    respond_with(@galleries = Gallery.all.paginate(:gallery => params[:page] || 1, :per_page => params[:per_page] || 10))
+    respond_with(@galleries = Gallery.all.paginate(:page => params[:page] || 1, :per_page => params[:per_page] || 10))
   end
 
   # GET /galleries/1

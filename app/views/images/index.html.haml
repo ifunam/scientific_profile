@@ -1,0 +1,9 @@
+%div{:class => 'span-24 row_title last'}
+  %b= @gallery.title
+%div{:id => "images", :class => 'span-24 last"' }
+  = render :partial => 'thumb', :collection => @images
+%div{:id =>"image-dialog"}
+%div{:class => "span-22 last"}= will_paginate(@images)
+%div{:class => 'span-24 ui-buttons last'}
+  = button_link_to t(:new),  new_gallery_image_path(@gallery)
+  = button_link_to t(:back),  gallery_path(@gallery)

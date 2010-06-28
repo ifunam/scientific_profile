@@ -6,6 +6,7 @@ es:
   new: 'Agregar'
   delete: 'Borrar'
   show: 'Mostrar'
+  back: 'Regresar'
   delete_confirm_question: '¿ Desea borrar este registro ?'
 
   pages:
@@ -26,6 +27,11 @@ es:
       actions: 'Acciones'
     new:
       title: 'Nueva galería'
+    show:
+     total_images: 'Número de imágenes'
+     add_images: 'Agregar imágenes'
+    edit:
+       title: 'Modificar información de la galería'
 
   simple_form:
     labels:

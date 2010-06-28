@@ -3,10 +3,15 @@ class ImagesController < ApplicationController
   skip_before_filter :verify_authenticity_token, :only => [:create]
   helper :application
 
-  respond_to :html, :js, :only => [:new, :show, :update]
+  respond_to :html, :js, :only => [:index, :new, :show, :update]
   respond_to :json, :js, :only => [:create]
   respond_to :js, :only => [:destroy, :edit]
 
+  def index
+    @gallery = Gallery.find(params[:gallery_id])
+    respond_with(@images = Image.where(:imageable_id => params[:gallery_id]).all.paginate(:page => params[:page] || 1, :per_page => params[:per_page] || 12))
+  end
+  
   def new
     respond_with(@image = Image.new) 
   end

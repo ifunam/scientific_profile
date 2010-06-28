@@ -2,8 +2,8 @@
   = image_tag thumb.file.url(:thumb)
   %div{:class => "actions"}
     %div{:class => "action ui-state-default ui-corner-all"}
-      = link_to content_tag(:span, "", :class => "ui-icon ui-icon-image"), edit_gallery_image_path(thumb), :title => "Modificar", :remote => true
+      = link_to content_tag(:span, "", :class => "ui-icon ui-icon-image"), edit_gallery_image_path(:gallery_id => thumb.imageable_id, :id => thumb.id), :title => "Modificar", :remote => true
     %div{:class => "action ui-state-default ui-corner-all" }
-      = link_to content_tag(:span, "", :class => "ui-icon ui-icon-zoomin"), gallery_image_path(thumb), :title => "Aumentar zoom", :remote => true
+      = link_to content_tag(:span, "", :class => "ui-icon ui-icon-zoomin"), gallery_image_path(:gallery_id => thumb.imageable_id, :id => thumb.id), :title => "Aumentar zoom", :remote => true
     %div{:class => "action ui-state-default ui-corner-all" }
       = link_to content_tag(:span, "", :class => "ui-icon ui-icon-trash"),  gallery_image_path(:gallery_id => thumb.imageable_id, :id => thumb.id), :method => :delete, :title => "Borrar", :confirm => "¿Desea borrar esta imagen?", :remote => true
