@@ -1,5 +1,9 @@
 %div{:class => 'row span-24 last'}
-  %span= page.title
-  %span= page.image.nil? ? '-' : image_tag(page.image.file.url(:icon))
-  %span= link_to 'Detalles', page_path(:id => page.id)
-  %span= link_to 'Borrar', page_path(:id => page.id), :method => :delete, :confirm => '¿ Desesas borrar este registo ?'
+  %div{:class => 'span-18'}
+    %b= page.title
+    %p= raw textilize(truncate(page.body, :length => 200))
+  %div{:class => 'span-2'}
+    = page.image.nil? ? '-' : image_tag(page.image.file.url(:icon))
+  %div{:class => 'span-4 actions last'}
+    = link_to t(:show), page_path(:id => page.id)
+    = link_to t(:delete), page_path(:id => page.id), :method => :delete, :confirm => '¿ Desesas borrar este registo ?'

@@ -105,19 +105,98 @@ body
   text-align: left
   padding: 10px
 
+label
+  float: left
+  with: 200px
+  display: block-inline
+
 input
+  margin-left: 40px
   font-size: 12px
   padding-left: 0px
   margin-left: 0px
+  font-family: 'lucida grande', 'lucida sans unicade', sans-serif
 
 input[type="text"],
 input[type="file"],
 textarea,
 input[type="password"]
+  margin-left: 40px
   width: auto
   height: auto
   padding-left: 0px
   font-size: 12px
 
+input[type="submit"]
+  padding: 4px
+
+.text
+  textarea
+    font-family: 'lucida grande', 'lucida sans unicade', sans-serif
+
 select
-  width: 165px
+  width: 200px
+  margin-left: 40px
+
+.notice
+  color: green
+
+.alert
+  color: red
+
+.fieldWithErrors
+  padding: 0px  
+  color: red
+  display: table
+
+.fieldWithErrors 
+  display: inline-block
+
+#errorExplanation
+  width: 400px
+  border: 2px solid red
+  padding: 7px
+  padding-bottom: 12px
+  margin-bottom: 20px
+  background-color: #f0f0f0
+
+  h2
+    text-align: left
+    font-weight: bold
+    padding: 5px 5px 5px 15px
+    font-size: 12px
+    margin: -7px
+    background-color: #c00
+    color: #fff
+
+  p
+    color: #333
+    margin-bottom: 0
+    padding: 5px
+  ul
+    text-align: left
+    margin-top: 15px
+
+  ul li
+    font-size: 12px
+    list-style: square
+
+.row_title
+  font-weight: bold
+  border: 1px solid silver
+  background-color: #41A1C9
+  color: white
+  padding: 5px
+  margin-left: -5px
+
+.row
+  padding-top: 10px
+  padding-bottom: -10px
+  border-bottom: 1px solid silver
+
+.actions a, a:visited
+  color: blue
+  text-decoration: none
+ 
+.actions a:hover
+  color: #41A1C9

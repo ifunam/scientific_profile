@@ -2,12 +2,14 @@
   %div{:class => 'span-22 last'}
     = f.input :title
   %div{:class => 'span-22 last'}
-    = f.input :body, :as => :text, :id => "markItUp"
+    = f.input :body, :as => :text, :size => "80x20", :id => "markItUp" 
   %div{:class => 'span-22 last'}
-    = f.collection_select :navlink_section_id, Navlink.all_section_links, :id, :title_with_ancestors
+    = f.label :navlink_section_id
+    = f.collection_select :navlink_section_id, Navlink.all_section_links, :id, :title_with_ancestors, :prompt => '-- Seleccione una sección --'
   %div{:class => 'span-22 last'}
     = f.label :image
     = f.fields_for :image_attributes do |image_form|
       = image_form.file_field :file, :size => 20
-  %div{:class => 'span-22 last'}
-    = f.button :submit 
+  %div{:class => 'span-22 ui-buttons last'}
+    = f.button :submit, :value => t(:save), :class => 'ui-state-default ui-corner-all button'
+    = button_link_to t(:cancel), pages_path

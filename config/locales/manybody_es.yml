@@ -1,4 +1,29 @@
 es:
+  cancel: 'Cancelar'
+  edit: 'Modificar'
+  save: 'Guardar'
+  update: 'Guardar cambios'
+  new: 'Agregar'
+  delete: 'Borrar'
+  show: 'Mostrar'
+  pages:
+    index:
+      title: 'Página'
+      image: 'Imagen'
+      actions: 'Acciones'
+    new:
+      title: 'Nueva página'
+    edit:
+      title: 'Modificar página'
+      
+  simple_form:
+    labels:
+      page:
+        title: 'Título'
+        body: 'Descripción'
+        navlink_section_id: 'Sección'
+        image: 'Imagen'
+
   activemodel:
     models:
       user: Usuario

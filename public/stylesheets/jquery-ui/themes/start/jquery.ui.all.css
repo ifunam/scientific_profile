@@ -1,2 +1,15 @@
 @import "jquery.ui.base.css";
 @import "jquery.ui.theme.css";
+
+.ui-buttons {
+  padding-top: 15px;
+  text-align: left;
+}
+
+.ui-buttons a {
+	color: white;
+	text-decoration:none;
+	padding: 5px;
+	font-weight: normal;
+	font-size: 12px;
+}
