@@ -4,7 +4,7 @@ class Page < ActiveRecord::Base
   validates_presence_of :title, :body
 
   belongs_to :author, :class_name => 'User', :foreign_key => 'author_id'
-  has_one :navlink_section, :as => :navlinkable, :dependent => :destroy
+  has_one :navlink_section, :as => :navlinkable, :dependent => :destroy, :class_name => 'Navlink'
   has_one :image, :as => :imageable
   accepts_nested_attributes_for :image
 
