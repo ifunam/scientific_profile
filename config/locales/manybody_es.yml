@@ -6,7 +6,7 @@ es:
   new: 'Agregar'
   delete: 'Borrar'
   show: 'Mostrar'
-  delete_confirm_question: '¿ Desea borrar estos registros ?'
+  delete_confirm_question: '¿ Desea borrar este registro ?'
 
   pages:
     index:

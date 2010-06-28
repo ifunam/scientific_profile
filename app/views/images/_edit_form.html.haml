@@ -1,0 +1,7 @@
+= form_for(@image, :url => gallery_image_path(:id => @image.id, :gallery_id => @image.imageable_id ), :html => {:multipart =>  true,  :target => "upload_target"} ) do |f| 
+  = # hidden_field :format, :js
+  = f.file_field :file, :id => "fileInputUpdate"
+  %br
+  %br
+  = f.submit('Actualizar', :id => 'image-update')
+= content_tag(:iframe, '', :id => 'upload_target', :name => 'upload_target', :src => '#', :style => "width:0;height:0;border:0px solid #fff;")

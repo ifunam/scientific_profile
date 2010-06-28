@@ -1,7 +1,11 @@
 ScientificProfile::Application.routes.draw do |map|
   devise_for :users
   resources :pages
-  resources :galleries
+
+  resources :galleries do
+    resources :images
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
