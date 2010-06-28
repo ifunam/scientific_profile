@@ -1,7 +1,8 @@
 class PagesController < ApplicationController
+  respond_to :html
+
   # GET /pages
   # GET /pages.xml
-  respond_to :html
   def index
     respond_with(@pages = Page.all.paginate(:page => params[:page] || 1, :per_page => params[:per_page] || 10))
   end
