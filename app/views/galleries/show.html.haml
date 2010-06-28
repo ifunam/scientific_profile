@@ -1,0 +1,7 @@
+%h2{:style => 'text-align: left;'}=@gallery.title
+%div{:class => "span-24 justify_text last" }
+  =raw textilize(@gallery.description)
+
+%div{:class => 'span-22 ui-buttons last'}
+  = button_link_to t(:edit), edit_gallery_path(:id => @gallery)
+  = button_link_to t(:cancel), galleries_path

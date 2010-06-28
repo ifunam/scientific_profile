@@ -6,6 +6,8 @@ es:
   new: 'Agregar'
   delete: 'Borrar'
   show: 'Mostrar'
+  delete_confirm_question: '¿ Desea borrar estos registros ?'
+
   pages:
     index:
       title: 'Página'
@@ -15,7 +17,16 @@ es:
       title: 'Nueva página'
     edit:
       title: 'Modificar página'
-      
+
+  galleries:
+    index:
+      title: 'Galerías'
+      gallery: 'Galería'
+      image: 'Imágenes'
+      actions: 'Acciones'
+    new:
+      title: 'Nueva galería'
+
   simple_form:
     labels:
       page:
@@ -23,6 +34,9 @@ es:
         body: 'Descripción'
         navlink_section_id: 'Sección'
         image: 'Imagen'
+      gallery:
+        title: 'Título'
+        description: 'Descripción'
 
   activemodel:
     models:
