@@ -1,0 +1,15 @@
+%div{:class => 'span-22 last'}
+  %b= 'Información personal'
+
+%div{:class => 'span-11'}
+  = f.input :firstname
+%div{:class => 'span-11 last'}
+  = f.input :lastname
+%div{:class => 'span-11'}
+  = f.input :gender, :as => :radio
+%div{:class => 'span-11 last'}
+  = f.input :birthdate
+%div{:class => 'span-22 last'}
+  = f.label :image
+  = f.fields_for :image_attributes do |image_form|
+    = image_form.file_field :file, :size => 20

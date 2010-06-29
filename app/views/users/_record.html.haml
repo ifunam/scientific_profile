@@ -1,0 +1,6 @@
+%h2{:style => 'text-align: left;'}=t('.title')
+= show_for record do |a|
+  = a.attribute :email
+  = a.association :group, :using => :name
+  = a.attribute :is_admin
+  = a.attribute :home_page
