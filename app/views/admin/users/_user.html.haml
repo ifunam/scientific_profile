@@ -1,0 +1,8 @@
+%div{:class => 'row span-24 last'}
+  %div{:class => 'span-18'}
+    %b= user.email
+  %div{:class => 'span-2'}
+    =  user.group.nil? ? t(:not_specified) : user.group.name 
+  %div{:class => 'span-4 actions last'}
+    = link_to t(:show), admin_user_path(:id => user.id)
+    = link_to t(:delete), admin_user_path(:id => user.id), :method => :delete, :confirm => t(:delete_confirm_question)
