@@ -1,6 +1,6 @@
 class ImagesController < ApplicationController
   layout 'gallery'
-  skip_before_filter :verify_authenticity_token, :only => [:create]
+  # skip_before_filter :verify_authenticity_token, :only => [:create]
   helper :application
 
   respond_to :html, :js, :only => [:index, :new, :show, :update]
