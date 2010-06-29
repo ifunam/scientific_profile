@@ -4,6 +4,9 @@
     %meta{ :content => "text/html; charset=utf-8", "http-equiv" => "content-type" }
     %title&= yield(t(:title))
     = csrf_meta_tag
+    %meta{:name => 'session-value', :content => cookies['_scientific_profile_session'] }
+    %meta{:name => 'session-key', :content => '_scientific_profile_session' }
+
     = stylesheet_link_tag 'screen.css', :media => 'screen, projection'
     = stylesheet_link_tag 'print.css', :media => 'print'
     /[if lt IE 8]

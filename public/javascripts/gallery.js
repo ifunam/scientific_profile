@@ -1,9 +1,12 @@
 $(document).ready(function()    {
 	var authToken = $('meta[name=csrf-token]').attr('content');
 	var authKey = $('meta[name=csrf-param]').attr('content');
+	var sessionVal = $('meta[name=session-value]').attr('content');
+	var sessionKey = $('meta[name=session-key]').attr('content');
 	var myHash = { };
-	myHash[authKey] = encodeURIComponent(authToken);
-	var gallery_id = $('#image_gallery_id').val();
+	myHash[sessionKey] = encodeURIComponent(sessionVal);
+    myHash[authKey] = encodeURIComponent(authToken);
+  	var gallery_id = $('#image_gallery_id').val();
 	$('#fileInput').uploadify({
 		'uploader': '/flash/uploadify/uploadify.swf',
 		'script': '/galleries/'+ gallery_id +'/images/',
