@@ -1,6 +1,11 @@
 // Place your application-specific JavaScript functions and classes here
 // This file is automatically included by javascript_include_tag :defaults
 $(document).ready(function()    {
+	current_year = new Date().getFullYear();
+	start_year = current_year - 100;
+	end_year = current_year - 15;
+	$('#user_person_attributes_birthdate').datepicker({ changeYear: true, changeMonth: true, yearRange: start_year+':'+end_year, dateFormat: 'dd-mm-yy', defaultDate: '01-01-'+end_year });
+	
 	// Add markItUp! to your textarea in one line        // $('textarea').markItUp( { Settings }, { OptionalExtraSettings } );
 	$('#page_body').markItUp(mySettings);
 
@@ -13,6 +18,8 @@ $(document).ready(function()    {
 			placeHolder:"New content"
 		}
 	);
+	
+
 	return false;
 });
 
