@@ -1,15 +1,17 @@
-%div{:class => 'span-22 last'}
-  %b= 'Información personal'
-
-%div{:class => 'span-11'}
-  = f.input :firstname
-%div{:class => 'span-11 last'}
-  = f.input :lastname
-%div{:class => 'span-11'}
-  = f.input :gender, :as => :radio
-%div{:class => 'span-11 last'}
-  = f.input :birthdate
-%div{:class => 'span-22 last'}
-  = f.label :image
-  = f.fields_for :image_attributes do |image_form|
-    = image_form.file_field :file, :size => 20
+%div{:class => 'span-22 last', :style => 'margin-bottom: 30px;'}
+  %div{:class => 'span-22 last'}
+    %b=t('.title')
+  %div{:class => 'span-11'}
+    = f.input :firstname, :label_html => { :class => 'my_label' }
+  %div{:class => 'span-11 last'}
+    = f.input :lastname, :label_html => { :class => 'my_label' }
+  %div{:class => 'span-11'}
+    = f.label :gender, :class => 'my_label', :required => true
+    = f.input :gender, :as => :radio, :label => false
+  %div{:class => 'span-11 last'}
+    = f.input :title, :input_html => {:size => 5}, :label_html => { :class => 'my_label' }, :required => false
+  %div{:class => 'span-11'}
+    = f.input :birthdate, :label_html => { :class => 'my_label' }
+  %div{:class => 'span-11 last'}
+    = f.simple_fields_for :image_attributes do |image_form|
+      = image_form.input :file, :input_html => {:size => 12}, :as => :file, :label_html => { :class => 'my_label' }, :required => false

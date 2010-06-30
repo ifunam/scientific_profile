@@ -1,6 +1,7 @@
-%div{:class => 'span-22 last'}
-  %b= 'Información de mi cuenta'
-%div{:class => 'span-22 last'}
-  = f.input :email
-%div{:class => 'span-22 last'}
-  = f.input :home_page
+%div{:class => 'span-22 last', :style => 'margin-bottom: 30px;'}
+  %div{:class => 'span-22 last'}
+    %b= 'Cuenta de usuario'
+  %div{:class => 'span-11'}
+    = f.input :email,  :label_html => { :class => 'my_label' }, :as => :string
+  %div{:class => 'span-11 last'}
+    = f.input :home_page, :label_html => { :class => 'my_label' }

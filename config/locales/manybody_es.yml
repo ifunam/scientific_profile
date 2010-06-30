@@ -21,6 +21,16 @@ es:
   users:
     record:
       title: 'Información de mi cuenta'
+    form:
+      title: 'Cuenta de usuario'
+      
+  addresses:
+    form:
+      title: 'Información de contacto'
+  people:
+    form:
+      title: 'Información personal'
+      
   galleries:
     index:
       title: 'Galerías'
@@ -34,6 +44,9 @@ es:
      add_images: 'Agregar imágenes'
     edit:
        title: 'Modificar información de la galería'
+  user_settings:
+    edit:
+       title: 'Modificar información de mi cuenta'
   admin:
     users:
       new:
@@ -56,7 +69,7 @@ es:
         password_confirmation: 'Confirmación de la contraseña'
         is_admin: 'Privilegios de administrador'
         group: 'Grupo'              
-    
+
   simple_form:
     labels:
       page:
@@ -73,6 +86,13 @@ es:
         password_confirmation: 'Confirmación de la contraseña'
         is_admin: 'Agregar privilegios de administrador'
         group: 'Grupo'
+      person:
+        firstname: Nombre(s)
+        lastname1: Apellido paterno
+        lastname2: Apellido materno
+        title: Título
+        gender: Género
+        birthdate: Fecha de nacimiento
 
   activemodel:
     models:
