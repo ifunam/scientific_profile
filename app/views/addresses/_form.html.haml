@@ -1,0 +1,20 @@
+%div{:class => 'span-22 last'}
+  %b= 'Información de contacto'
+
+%div{:class => 'span-11'}
+  = f.input :location
+%div{:class => 'span-11 last'}
+  = f.input :pobox
+%div{:class => 'span-8'}
+  = f.input :country, :as => :string
+%div{:class => 'span-7'}
+  = f.input :state
+%div{:class => 'span-7 last'}
+  = f.input :city
+
+%div{:class => 'span-8'}
+  = f.input :phone
+%div{:class => 'span-7'}
+  = f.input :fax
+%div{:class => 'span-7 last'}
+  = f.input :mobile

@@ -1,0 +1,3 @@
+= "$('#image-dialog').dialog({ autoOpen: true, width: 460, height: 120, title: 'Actualizar imagen' });"
+- form_content = render :partial => 'edit_form'
+= raw "$('#image-dialog').html('#{sanitize_html(form_content)}');"

@@ -1,0 +1,10 @@
+%div{:class => 'row span-24 last'}
+  %div{:class => 'span-18'}
+    %b= gallery.title
+    %p= raw textilize(truncate(gallery.description, :length => 200))
+  %div{:class => 'span-2'}
+    = gallery.images.size == 0 ? 0 : link_to(image_tag(gallery.images.first.file.url(:icon)),  gallery_images_path(gallery))
+
+  %div{:class => 'span-4 actions last'}
+    = link_to t(:show), gallery_path(:id => gallery.id)
+    = link_to t(:delete), gallery_path(:id => gallery.id), :method => :delete, :confirm => t(:delete_confirm_question)

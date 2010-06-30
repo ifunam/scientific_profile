@@ -1,0 +1,3 @@
+%div{:class => 'span-24 section_left last'}
+  - simple_form_for(@user, :user, :url => user_settings_path(:id => @user.id), :html => { :multipart => true }) do |f|
+    = render :partial => 'form', :locals => { :f => f }

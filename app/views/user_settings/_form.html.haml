@@ -1,0 +1,8 @@
+= render :partial => 'users/form', :locals => { :f => f }
+= f.simple_fields_for :person_attributes, @user.person do |person_form|
+  = render :partial => 'people/form', :locals => { :f => person_form}
+= f.simple_fields_for :address_attributes, @user.address do |address_form|
+  = render :partial => 'addresses/form', :locals => { :f => address_form}
+%div{:class => 'span-22 ui-buttons last'}
+  = f.button :submit, :value => t(:save), :class => 'ui-state-default ui-corner-all button'
+  = button_link_to t(:cancel), user_settings_path

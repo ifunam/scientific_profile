@@ -1,0 +1,11 @@
+%h2{:style => 'text-align: left;'}=t('.title')
+= show_for record do |a|
+  = a.attribute :location
+  = a.attribute :pobox
+  = a.attribute :country
+  = a.attribute :state
+  = a.attribute :city
+  = a.attribute :zipcode
+  = a.attribute :phone
+  = a.attribute :fax
+  = a.attribute :mobile

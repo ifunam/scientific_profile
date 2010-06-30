@@ -1,0 +1,15 @@
+%h2{:style => 'text-align: left;'}=@gallery.title
+%div{:class => "span-24 justify_text last" }
+  = raw textilize(@gallery.description)
+  - if @gallery.images.size > 0
+    %p= image_tag(@gallery.images.first.file.url(:medium))
+    %b= t('.total_images') + ':'.html_safe
+    = link_to @gallery.images.size, gallery_images_path(@gallery)
+  - else
+    %b= t('.total_images') + ':'.html_safe
+    = '0'
+    %p= link_to t('.add_images'),  new_gallery_image_path(@gallery)
+
+%div{:class => 'span-22 ui-buttons last'}
+  = button_link_to t(:edit), edit_gallery_path(:id => @gallery)
+  = button_link_to t(:cancel), galleries_path

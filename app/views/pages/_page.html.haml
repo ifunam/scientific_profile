@@ -6,4 +6,4 @@
     = page.image.nil? ? '-' : image_tag(page.image.file.url(:icon))
   %div{:class => 'span-4 actions last'}
     = link_to t(:show), page_path(:id => page.id)
-    = link_to t(:delete), page_path(:id => page.id), :method => :delete, :confirm => '¿ Desesas borrar este registo ?'
+    = link_to t(:delete), page_path(:id => page.id), :method => :delete, :confirm => t(:delete_confirm_question)

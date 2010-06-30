@@ -1,0 +1,22 @@
+<html>
+<body>
+   <% image_content = render :partial => "thumb", :object => @image %>
+   <script type='text/javascript' charset='utf-8'>
+	var loc = document.location;
+    with(window.parent) { 
+		setTimeout(function() { 
+			window.eval("$('#image-dialog').dialog('close');");
+			window.eval("$('#<%= dom_id @image %>').replaceWith('<%= sanitize_html(image_content) %>');"); 
+			window.loc && loc.replace('about:blank'); 
+	   		}, 
+		1) 
+	}
+	</script>
+	
+	<div>
+		<div class="header" class="span-24">
+		</div>
+	</div>
+</body>
+
+</html>

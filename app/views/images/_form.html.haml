@@ -1,0 +1,11 @@
+%div{:id => "gallery", :class => "span-23 prepend-1 last"}
+  %div{:class => 'span-16', :id => 'title' }
+    %b='Galería'
+  %div{:class => 'span-7 last', :id => 'form'}
+    = form_for(@image, :url => gallery_images_path,:html => {:multipart =>  true}) do |f| 
+      = hidden_field :format, :js
+      = f.file_field :file, :id => "fileInput"
+      = f.hidden_field :gallery_id, :value => params[:gallery_id]
+  %div{:id => "images", :class => 'span-16' }
+  %div{:id => 'uploadify_queueID', :class => 'span-7 last'}
+%div{:id =>"image-dialog"}

@@ -6,6 +6,9 @@ es:
   new: 'Agregar'
   delete: 'Borrar'
   show: 'Mostrar'
+  back: 'Regresar'
+  delete_confirm_question: '¿ Desea borrar este registro ?'
+  not_specified: 'Sin definir'
   pages:
     index:
       title: 'Página'
@@ -15,7 +18,45 @@ es:
       title: 'Nueva página'
     edit:
       title: 'Modificar página'
-      
+  users:
+    record:
+      title: 'Información de mi cuenta'
+  galleries:
+    index:
+      title: 'Galerías'
+      gallery: 'Galería'
+      image: 'Imágenes'
+      actions: 'Acciones'
+    new:
+      title: 'Nueva galería'
+    show:
+     total_images: 'Número de imágenes'
+     add_images: 'Agregar imágenes'
+    edit:
+       title: 'Modificar información de la galería'
+  admin:
+    users:
+      new:
+        title: 'Agregar nuevo usuario'
+      index:
+        title: 'Administración de usuarios'    
+        email: 'Correo electrónico'
+        group: 'Grupo'
+        actions: 'Acciones'
+      show: 
+        title: 'Detalles de la cuenta'
+      edit:
+        title: 'Modificar cuenta de usuario'
+        
+  show_for:
+    models:
+      user:
+        email: 'Correo electrónico'
+        password: 'Contraseña'
+        password_confirmation: 'Confirmación de la contraseña'
+        is_admin: 'Privilegios de administrador'
+        group: 'Grupo'              
+    
   simple_form:
     labels:
       page:
@@ -23,6 +64,15 @@ es:
         body: 'Descripción'
         navlink_section_id: 'Sección'
         image: 'Imagen'
+      gallery:
+        title: 'Título'
+        description: 'Descripción'
+      user:
+        email: 'Correo electrónico'
+        password: 'Contraseña'
+        password_confirmation: 'Confirmación de la contraseña'
+        is_admin: 'Agregar privilegios de administrador'
+        group: 'Grupo'
 
   activemodel:
     models:
@@ -51,4 +101,5 @@ es:
         body: Descripción
         image: Imagen
         navlink: Sección
+
      
