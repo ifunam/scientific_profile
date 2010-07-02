@@ -1,0 +1,29 @@
+= simple_form_for(@article, :html => {:multipart => true }) do |f|
+  %div{:class => 'span-22 last'}
+    = f.input :title, :as => :text, :input_html => { :size => "80x2" }
+  %div{:class => 'span-22 last'}
+    = f.input :authors, :as => :text, :input_html => { :size => "80x2" }
+  %div{:class => 'span-11'}
+    = f.association :journal
+  %div{:class => 'span-11 last'}
+    = f.association :article_status
+  %div{:class => 'span-11'}
+    = f.input :year, :input_html => { :size => "4" }
+  %div{:class => 'span-11 last'}
+    = f.input :month, :input_html => { :size => "2" }
+  %div{:class => 'span-11'}
+    = f.input :vol, :as => :string 
+  %div{:class => 'span-11 last'}
+    = f.input :num,:as => :string 
+  %div{:class => 'span-11'}
+    = f.input :doi, :as => :string 
+  %div{:class => 'span-11 last'}
+    = f.input :pacsnum,:as => :string 
+  %div{:class => 'span-22 last'}
+    = f.input :url, :as => :string, :input_html => { :size => "80" }
+  %div{:class => 'span-22 last'}
+    = render :partial => 'documents/form', :locals => { :f => f }
+
+  %div{:class => 'span-22 ui-buttons last'}
+    = f.button :submit, :value => t(:save), :class => 'ui-state-default ui-corner-all button'
+    = button_link_to t(:cancel), articles_path

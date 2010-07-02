@@ -1,0 +1,11 @@
+%div{:class => 'row span-24 last'}
+  %div{:class => 'span-18'}
+    = article.as_text 
+    - unless article.document.nil?
+      = link_to " (#{article.document.file.file_type})",  article.document.file.url, :target => '_new'
+   
+  %div{:class => 'span-2'}
+    = article.article_status.name
+  %div{:class => 'span-4 actions last'}
+    = link_to t(:show), article_path(:id => article.id)
+    = link_to t(:delete), article_path(:id => article.id), :method => :delete, :confirm => t(:delete_confirm_question)

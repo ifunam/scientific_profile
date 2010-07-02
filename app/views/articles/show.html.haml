@@ -1,0 +1,17 @@
+%div{:class => "span-22 section_left prepend-2 last" }
+  %h2=t('.title')
+  = show_for @article do |a|
+    = a.attribute :title
+    = a.attribute :authors
+    = a.association :journal, :using => :name
+    = a.association :article_status, :using => :name
+    = a.attribute :year
+    = a.attribute :month
+    = a.attribute :vol
+    = a.attribute :num
+    = a.attribute :doi
+    = a.attribute :pacsnum
+    = a.attribute :url
+  %div{:class => 'span-22 ui-buttons last'}
+    = button_link_to t(:edit), edit_article_path(:id => @article)
+    = button_link_to t(:cancel), articles_path
