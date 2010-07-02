@@ -18,10 +18,10 @@
     = javascript_include_tag "jquery.ui/jquery-ui-1.8.1.custom"
     = javascript_include_tag "markitup/jquery.markitup.pack", "markitup/sets/textile/set"
 
-
   %body
     = render :partial => 'layouts/header'
     %div{:class =>'container'}
-      = render :partial => 'layouts/navbar'
+      - unless current_user.nil?
+        = render :partial => 'layouts/navbar'
       = yield
     = render :partial => 'layouts/footer'

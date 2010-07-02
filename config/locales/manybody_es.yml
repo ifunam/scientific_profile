@@ -9,6 +9,7 @@ es:
   back: 'Regresar'
   delete_confirm_question: '¿ Desea borrar este registro ?'
   not_specified: 'Sin definir'
+
   pages:
     index:
       title: 'Página'
@@ -18,19 +19,38 @@ es:
       title: 'Nueva página'
     edit:
       title: 'Modificar página'
+
   users:
     record:
       title: 'Información de mi cuenta'
     form:
       title: 'Cuenta de usuario'
-      
+
   addresses:
     form:
       title: 'Información de contacto'
+    record:
+     title: 'Información de contacto'
+
   people:
     form:
       title: 'Información personal'
-      
+    record:
+      title: 'Información personal'
+
+  articles:
+    new:
+      title: 'Registrar nuevo artículo'
+    edit:
+      title: 'Modificar artículo'
+    show:
+      title: 'Artículo'
+    index:
+      title: 'Artículos'
+      article: 'Artículo'
+      status: 'Status'
+      actions: 'Acciones'
+
   galleries:
     index:
       title: 'Galerías'
@@ -44,9 +64,11 @@ es:
      add_images: 'Agregar imágenes'
     edit:
        title: 'Modificar información de la galería'
+
   user_settings:
     edit:
        title: 'Modificar información de mi cuenta'
+
   admin:
     users:
       new:
@@ -60,7 +82,7 @@ es:
         title: 'Detalles de la cuenta'
       edit:
         title: 'Modificar cuenta de usuario'
-        
+
   show_for:
     models:
       user:
@@ -121,5 +143,3 @@ es:
         body: Descripción
         image: Imagen
         navlink: Sección
-
-     

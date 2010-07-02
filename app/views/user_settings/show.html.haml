@@ -1,6 +1,9 @@
 %div{:class => "span-24 section_left last" }
-  = render :partial => 'users/record', :object => @user
-  = render :partial => 'people/record', :object => @user.person unless @user.person.nil?
-  = render :partial => 'addresses/record', :object => @user.address unless @user.address.nil?
+  %div{:class => "span-24 last" }
+    = render :partial => 'users/record', :object => @user
+  %div{:class => "span-12" }
+    = render :partial => 'people/record', :object => @user.person unless @user.person.nil?
+  %div{:class => "span-12 last" }
+    = render :partial => 'addresses/record', :object => @user.address unless @user.address.nil?
   %div{:class => 'span-22 ui-buttons last'}
     = button_link_to t(:edit), edit_user_settings_path(:id => @user)
