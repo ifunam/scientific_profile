@@ -5,11 +5,12 @@ ScientificProfile::Application.routes.draw do |map|
   resources :galleries do
     resources :images
   end
+  resources :articles
   resource :user_settings
   
   namespace :admin do
     resources :users
   end
 
-  root :to => "pages#index"
+  root :to => "user_settings#show"
 end
