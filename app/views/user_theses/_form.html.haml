@@ -1,0 +1,4 @@
+= f.simple_fields_for :user_thesis_attributes do |user_thesis_form|
+  = f.label :role_in_thesis_id, :class => 'my_label', :required => true
+  = user_thesis_form.collection_select :role_in_thesis_id, RoleInThesis.all, :id, :name 
+  = user_thesis_form.hidden_field :user_id, :value => current_user.id

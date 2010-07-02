@@ -1,0 +1,17 @@
+%div{:class => "span-22 section_left prepend-2 last" }
+  %h2=t('.title')
+  = show_for @thesis do |a|
+    = a.attribute :title
+    = a.attribute :authors
+    = a.association :academic_level, :using => :name
+    = a.attribute :career_name
+    = a.attribute :faculty_or_school
+    = a.association :institution, :using => :name
+    = a.attribute :start_year
+    = a.attribute :start_month
+    = a.attribute :end_year
+    = a.attribute :end_month
+    = a.attribute :is_finished
+  %div{:class => 'span-22 ui-buttons last'}
+    = button_link_to t(:edit), edit_thesis_path(:id => @thesis)
+    = button_link_to t(:cancel), theses_path

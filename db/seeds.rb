@@ -15,3 +15,15 @@ end
 ['Applied Physics B', 'Classical and Quantum Gravity', 'Physical Review A'].each do |name|
   Journal.create(:name => name)
 end
+
+['Universidad Nacional Autónoma de México'].each do |name|
+  Institution.create(:name => name)
+end
+
+['Licenciatura', 'Maestría', 'Doctorado', 'Otro'].each do |name|
+  AcademicLevel.create(:name => name)
+end
+
+['Autor', 'Director', 'Asesor', 'Tutor'].each do |name|
+  RoleInThesis.create(:name => name)
+end

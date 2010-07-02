@@ -1,0 +1,11 @@
+%div{:class => 'row span-24 last'}
+  %div{:class => 'span-18'}
+    = thesis.as_text 
+    - unless thesis.document.nil?
+      = link_to " (#{thesis.document.file.file_type})",  thesis.document.file.url, :target => '_new'
+   
+  %div{:class => 'span-2'}
+    = thesis.is_finished?
+  %div{:class => 'span-4 actions last'}
+    = link_to t(:show), thesis_path(:id => thesis.id)
+    = link_to t(:delete), thesis_path(:id => thesis.id), :method => :delete, :confirm => t(:delete_confirm_question)

@@ -1,6 +1,6 @@
 %h2{:style => 'text-align: left;'}=t('.title')
 %div{:class => "span-12" }
-  = image_tag(record.person.image.file.url(:medium))
+  = image_tag(record.person.nil? ? 'missing_avatar.png' : record.person.image.file.url(:medium))
 %div{:class => "span-12 last" }
   = show_for record do |a|
     = a.attribute :email

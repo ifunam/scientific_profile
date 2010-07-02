@@ -6,8 +6,9 @@ ScientificProfile::Application.routes.draw do |map|
     resources :images
   end
   resources :articles
+  resources :theses
   resource :user_settings
-  
+
   namespace :admin do
     resources :users
   end

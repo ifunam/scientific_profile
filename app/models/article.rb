@@ -15,7 +15,7 @@ class Article < ActiveRecord::Base
   has_one :document, :as => :documentable, :dependent => :destroy
   accepts_nested_attributes_for :document
 
-  default_scope :order => 'year DESC, month DESC, title ASC, authors ASC, article_status_id ASC'
+  default_scope :order => 'year DESC, month DESC, authors ASC, title ASC, article_status_id ASC'
 
   scope :accepted, where(:article_status_id => 1)
   scope :sent, where(:article_status_id => 2)
