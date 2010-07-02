@@ -5,6 +5,8 @@ class Person < ActiveRecord::Base
   belongs_to :user
   accepts_nested_attributes_for :image
   
+  default_scope :order => 'lastname, firstname ASC'
+  
   def fullname
     [ self.firstname, self.lastname1.strip, (self.lastname2 != nil ? self.lastname2.strip : nil)].compact.join(' ')
   end
