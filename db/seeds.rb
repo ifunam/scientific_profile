@@ -27,3 +27,19 @@ end
 ['Autor', 'Director', 'Asesor', 'Tutor'].each do |name|
   RoleInThesis.create(:name => name)
 end
+
+['Publicado', 'En prensa', ' Aceptado para publicación', 'En edición', 'En dictamén o evaluación', 'En preparación'].each do |name|
+  EditionStatus.create(:name => name)
+end
+
+['Autor', 'Coautor', 'Revisor', 'Traductor', 'Editor', 'Compilador', 'Coordinador', 'Otro'].each do |name|
+  RoleInEdition.create(:name => name)
+end
+
+['Autor', 'Coautor', 'Revisor', 'Traductor'].each do |name|
+  RoleInChapter.create(:name => name)
+end
+
+%w(Introducción Prefacio Prólogo Capítulo Apéndice Índice Otro).each do |name|
+  ChapterType.create(:name => name)  
+end
