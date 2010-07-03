@@ -43,6 +43,6 @@ class PagesController < ApplicationController
   def destroy
     @page = Page.find(params[:id])
     @page.destroy
-    respond_with(@page, :status => :deleted, :location => pages_url)
+    respond_with(@page, :status => :deleted, :location => pages_path)
   end
 end

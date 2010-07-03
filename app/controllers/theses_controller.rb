@@ -43,6 +43,6 @@ class ThesesController < ApplicationController
   def destroy
     @thesis = Thesis.find(params[:id])
     @thesis.destroy
-    respond_with(@thesis, :status => :deleted, :location => pages_url)
+    respond_with(@thesis, :status => :deleted, :location => theses_path)
   end
 end

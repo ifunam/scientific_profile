@@ -43,6 +43,6 @@ class ArticlesController < ApplicationController
   def destroy
     @article = Article.find(params[:id])
     @article.destroy
-    respond_with(@article, :status => :deleted, :location => pages_url)
+    respond_with(@article, :status => :deleted, :location => articles_path)
   end
 end
