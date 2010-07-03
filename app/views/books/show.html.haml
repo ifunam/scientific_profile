@@ -1,0 +1,24 @@
+%div{:class => "span-22 section_left prepend-2 last" }
+  %h2=t('.title')
+  = show_for @book do |a|
+    = a.attribute :title
+    = a.attribute :authors
+    = a.association :book_edition, :using => :edition
+    = a.association :book_edition, :using => :year
+    = a.association :book_edition, :using => :pages
+    = a.association :book_edition, :using => :isbn
+    = a.association :book_edition, :using => :place_of_publication
+    = a.association :book_edition, :using => :publishers
+    - a.association :edition_status do
+      = @book.book_edition.edition_status.name
+    = a.attribute :volume
+    - unless @book.url.to_s.strip.empty?
+      - a.attribute :url do
+        = raw link_to t(:see_link), @book.url
+    - unless @book.book_edition.document.nil?
+      - a.attribute :file do
+        = raw link_to link_to "#{@book.book_edition.document.file.file_type}",  @book.book_edition.document.file.url, :target => '_new'
+
+  %div{:class => 'span-22 ui-buttons last'}
+    = button_link_to t(:edit), edit_book_path(:id => @book)
+    = button_link_to t(:cancel), books_path

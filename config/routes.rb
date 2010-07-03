@@ -7,6 +7,8 @@ ScientificProfile::Application.routes.draw do |map|
   end
   resources :articles
   resources :theses
+  resources :books
+  resources :book_chapters
   resource :user_settings
 
   namespace :admin do

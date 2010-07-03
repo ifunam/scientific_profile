@@ -1,0 +1,11 @@
+%div{:class => 'row span-24 last'}
+  %div{:class => 'span-18'}
+    = book_edition.as_text 
+    - unless book_edition.document.nil?
+      = link_to " (#{book_edition.document.file.file_type})", book_edition.document.file.url, :target => '_new'
+   
+  %div{:class => 'span-2'}
+    = book_edition.edition_status.name
+  %div{:class => 'span-4 actions last'}
+    = link_to t(:show), book_path(:id => book_edition.book.id)
+    = link_to t(:delete), book_path(:id => book_edition.book.id), :method => :delete, :confirm => t(:delete_confirm_question)
