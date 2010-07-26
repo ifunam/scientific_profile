@@ -1,11 +1,10 @@
 source :gemcutter
-gem "rails", "3.0.0.beta4", :git => 'git://github.com/rails/rails.git', :branch => 'master'
+gem "rails", :git => 'git://github.com/rails/rails.git', :branch => 'master'
 gem "devise", :git => 'git://github.com/plataformatec/devise.git', :branch => 'master'
 gem "compass", "0.10.2"
-gem "compass-jquery-plugin"
 gem "show_for", :git => "http://github.com/plataformatec/show_for.git", :branch => 'master'
 gem "will_paginate", :git => "http://github.com/mislav/will_paginate.git", :branch => 'master'
-gem "carrierwave", "0.4.4", :git => "git://github.com/jnicklas/carrierwave.git", :branch => 'master'
+gem "carrierwave", "0.5.0.beta2", :git => "git://github.com/jnicklas/carrierwave.git", :branch => 'master'
 gem "rmagick"
 gem "attribute_normalizer", :git => "http://github.com/mdeering/attribute_normalizer.git"
 gem "tzinfo"
