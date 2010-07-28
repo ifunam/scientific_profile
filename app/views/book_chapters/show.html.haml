@@ -1,0 +1,17 @@
+%div{:class => "span-22 section_left prepend-2 last" }
+  %h2=t('.title')
+  = show_for @book_chapter do |a|
+    - %w(title authors volume).each do |attribute|
+      - a.association :book do
+        = @book_chapter.book_edition.book.send(attribute)
+
+    - %w(edition year pages isbn place_of_publication publishers).each do |attribute|
+      - a.association :book_edition do
+        = @book_chapter.book_edition.send(attribute)
+
+    = a.attribute :title
+    = a.attribute :pages
+ 
+  %div{:class => 'span-22 ui-buttons last'}
+    = button_link_to t(:edit), edit_book_chapter_path(:id => @book_chapter)
+    = button_link_to t(:cancel), book_chapters_path

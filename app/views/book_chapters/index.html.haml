@@ -1,0 +1,12 @@
+%h3=t('.title')
+%div{ :id=>'collection', :class => 'span-24 section_left last'}
+  %div{:class => 'span-24 row_title last'}
+    %div{:class => 'span-18'}= t '.title'
+    %div{:class => 'span-2'}= t '.status'
+    %div{:class => 'span-3'}= t '.actions'
+  = render :partial => @book_chapters
+%div{:class => 'span-24 last'}
+  = will_paginate @book_chapters
+
+%div{:class => 'span-24 ui-buttons last'}
+  = button_link_to t(:new), new_book_chapter_path

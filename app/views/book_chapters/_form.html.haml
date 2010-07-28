@@ -1,0 +1,10 @@
+%div{:class => 'span-11'}
+  = f.hidden_field :id unless f.object.nil?
+  = f.input :title
+%div{:class => 'span-11 last'}
+  = f.input :pages
+%div{:class => 'span-11'}
+  = f.label :chapter_type_id, :class => 'my_label', :required => true
+  = f.collection_select :chapter_type_id, ChapterType.all, :id, :name
+%div{:class => 'span-11 last'}
+  = render :partial => 'documents/form', :locals => { :f => f}

@@ -1,0 +1,4 @@
+%div{:class => 'span-22 prepend-2 section_left last'}
+  %h2=t('.title')
+  = simple_form_for(@book, :url => book_chapters_path, :html => {:multipart => true }) do |f|
+    = render :partial => 'book_chapter_form', :locals => {:f => f}

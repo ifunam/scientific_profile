@@ -1,49 +1,40 @@
-class BooksController < ApplicationController
+class BookChaptersController < ApplicationController
   respond_to :html
 
-  # GET /pages
-  # GET /pages.xml
   def index
-    respond_with(@books = BookChapters.all.paginate(:page => params[:page] || 1, :per_page => params[:per_page] || 10))
+    respond_with(@book_chapters = BookChapter.all.paginate(:page => params[:page] || 1, :per_page => params[:per_page] || 10))
   end
 
-  # GET /pages/1
-  # GET /pages/1.xml
   def show
-    respond_with(@book = Book.find(params[:id]))
+    respond_with(@book_chapter = BookChapter.find(params[:id]))
   end
 
-  # GET /pages/new
-  # GET /pages/new.xml
   def new
-    respond_with(@book = Book.new)
+    @book = Book.new
+    @book.build_book_edition
+    respond_with(@book)
   end
 
-  # GET /pages/1/edit
   def edit
-    respond_with(@book = Book.find(params[:id]))
+    @book_chapter = BookChapter.find(params[:id])
+    respond_with(@book = @book_chapter.book_edition.book)
   end
 
-  # POST /pages
-  # POST /pages.xml
   def create
-    respond_with(@book = Book.create(params[:book]), :status => :created)
+    respond_with(@book = Book.create(params[:book]), :status => :created, :location => book_chapter_path)
   end
 
-  # PUT /pages/1
-  # PUT /pages/1.xml
   def update
     @book = Book.find(params[:id])
     @book.update_attributes(params[:book])
-    respond_with(@book, :status => :updated)
+    book_id = params[:book][:book_edition_attributes][:book_chapter_attributes][:id]  
+    respond_with(@book, :status => :updated, :location => book_chapter_path(:id => book_id))
   end
 
-  # DELETE /pages/1
-  # DELETE /pages/1.xml
   def destroy
     @book = Book.find(params[:id])
     @book.destroy
-    respond_with(@book, :status => :deleted, :location => pages_url)
+    respond_with(@book, :status => :deleted, :location => book_chapters_url)
   end
 end
 
