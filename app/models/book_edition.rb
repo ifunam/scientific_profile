@@ -21,9 +21,13 @@ class BookEdition < ActiveRecord::Base
   has_one :document, :as => :documentable, :dependent => :destroy
   accepts_nested_attributes_for :document
 
-  def as_text
-    text = book.as_text + ' ' + [edition, book.vol, "#{place_of_publication}:#{publishers}"].compact.join('. ') + "; #{year}."
+  def edition_text
+    text = [edition, book.vol, "#{place_of_publication}:#{publishers}"].compact.join('. ') + "; #{year}."
     text += " #{pages}." unless pages.to_s.strip.empty?
     text
+  end 
+  
+  def as_text
+   book.authors_and_title + ' ' + edition_text
   end
 end

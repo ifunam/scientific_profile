@@ -11,4 +11,12 @@ class BookChapter < ActiveRecord::Base
 
   has_one :document, :as => :documentable, :dependent => :destroy
   accepts_nested_attributes_for :document  
+  
+  def authors_and_title
+    "#{book_edition.book.authors}. #{chapter_type.name}: #{title}." 
+  end
+  
+  def as_text
+    authors_and_title + ' ' + book_edition.edition_text
+  end
 end

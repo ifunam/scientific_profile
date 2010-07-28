@@ -8,7 +8,7 @@ class Book < ActiveRecord::Base
   has_one :book_edition
   accepts_nested_attributes_for :book_edition
 
-  def as_text
+  def authors_and_title
     "#{authors}. #{title}."
   end
 
