@@ -1,0 +1,3 @@
+= render :partial => 'book_editions/book_edition_form', :locals => { :f => f }
+= f.simple_fields_for :book_chapter_attributes, (@book_chapter ||@book.book_edition.book_chapter) do |chapter_form|
+  = render :partial => 'book_chapters/form', :locals => { :f => chapter_form }
