@@ -1,0 +1,207 @@
+es:
+  cancel: 'Cancelar'
+  edit: 'Modificar'
+  save: 'Guardar'
+  update: 'Guardar cambios'
+  new: 'Agregar'
+  delete: 'Borrar'
+  show: 'Mostrar'
+  back: 'Regresar'
+  delete_confirm_question: '¿ Desea borrar este registro ?'
+  not_specified: 'Sin definir'
+
+  pages:
+    index:
+      title: 'Página'
+      image: 'Imagen'
+      actions: 'Acciones'
+    new:
+      title: 'Nueva página'
+    edit:
+      title: 'Modificar página'
+
+  users:
+    record:
+      title: 'Información de mi cuenta'
+    form:
+      title: 'Cuenta de usuario'
+
+  addresses:
+    form:
+      title: 'Información de contacto'
+    record:
+     title: 'Información de contacto'
+
+  people:
+    form:
+      title: 'Información personal'
+    record:
+      title: 'Información personal'
+
+  articles:
+    new:
+      title: 'Registrar nuevo artículo'
+    edit:
+      title: 'Modificar artículo'
+    show:
+      title: 'Artículo'
+    index:
+      title: 'Artículos'
+      article: 'Artículo'
+      status: 'Status'
+      actions: 'Acciones'
+
+  galleries:
+    index:
+      title: 'Galerías'
+      gallery: 'Galería'
+      image: 'Imágenes'
+      actions: 'Acciones'
+    new:
+      title: 'Nueva galería'
+    show:
+     total_images: 'Número de imágenes'
+     add_images: 'Agregar imágenes'
+    edit:
+       title: 'Modificar información de la galería'
+
+  user_settings:
+    edit:
+       title: 'Modificar información de mi cuenta'
+
+  books:
+    new:
+      title: Registrar un libro
+    index:
+      title: Libros
+      status: Estado
+      actions: Acciones
+    show:
+      title: Libro
+    edit:
+      title: Modificar libro
+      
+  book_chapters:
+    new:
+      title: 'Registrar un capítulo de libro'
+    show:
+      title: 'Capítulo de libro'
+    index:
+      title: Capítulos de libros
+      status: Estado
+      actions: Acciones
+    edit:
+      title: Modificar capítulo
+      
+  admin:
+    users:
+      new:
+        title: 'Agregar nuevo usuario'
+      index:
+        title: 'Administración de usuarios'    
+        email: 'Correo electrónico'
+        group: 'Grupo'
+        actions: 'Acciones'
+      show: 
+        title: 'Detalles de la cuenta'
+      edit:
+        title: 'Modificar cuenta de usuario'
+
+  show_for:
+    models:
+      user:
+        email: 'Correo electrónico'
+        password: 'Contraseña'
+        password_confirmation: 'Confirmación de la contraseña'
+        is_admin: 'Privilegios de administrador'
+        group: 'Grupo'              
+
+  simple_form:
+    labels:
+      page:
+        title: 'Título'
+        body: 'Descripción'
+        navlink_section_id: 'Sección'
+        image: 'Imagen'
+      gallery:
+        title: 'Título'
+        description: 'Descripción'
+      user:
+        email: 'Correo electrónico'
+        password: 'Contraseña'
+        password_confirmation: 'Confirmación de la contraseña'
+        is_admin: 'Agregar privilegios de administrador'
+        group: 'Grupo'
+      person:
+        firstname: Nombre(s)
+        lastname1: Apellido paterno
+        lastname2: Apellido materno
+        title: Título
+        gender: Género
+        birthdate: Fecha de nacimiento
+      book:
+        title: Título
+        authors: Autor(es)
+        volume: Volumen
+        url: Página web
+      book_edition:
+        edition: Edición
+        year: Año
+        pages: Páginas
+        isbn: ISBN
+        place_of_publication: Lugar de publicación
+        publishers: Editorial
+        edition_status: Estado
+      book_chapter:
+        title: Título del capítulo
+        pages: Páginas del capítulo
+        chapter_type_id: Tipo de capítulo
+        file: 'Archivo'
+
+  activemodel:
+    models:
+      user: Usuario
+      person: Información personal
+      group: Grupo
+      navlink: Opción de navegación
+      page: Página
+      image: Imagen
+    attributes:
+      user:
+        login: Usuario
+        password: Contraseña
+        password_confirmation: Confirmación de la contraseña
+        userstatus: Estado del usuario
+        email: Correo electrónico
+      person:
+        firstname: Nombre(s)
+        lastname1: Apellido paterno
+        lastname2: Apellido materno
+        title: Título
+        gender: Género
+        birthdate: Fecha de nacimiento
+      page:
+        title: Título
+        body: Descripción
+        image: Imagen
+        navlink: Sección
+      book:
+        title: Título
+        authors: Autor(es)
+        volume: Volumen
+        url: Página web
+      book_edition:
+        edition: Edición
+        year: Año
+        pages: Páginas
+        isbn: ISBN
+        place_of_publication: Lugar de publicación
+        publishers: Editorial
+        edition_status: Estado
+        file: 'Archivo'
+      book_chapter:
+        title: Título del capítulo
+        pages: Páginas del capítulo
+        chapter_type: Tipo de capítulo
+        file: 'Archivo'
+        
