@@ -1,0 +1,16 @@
+%div{:class => 'span-11'}
+  = f.hidden_field :id unless f.object.nil?
+  = f.input :edition
+%div{:class => 'span-11 last'}
+  = f.input :year, :input_html => { :size => "4" }, :as => :string
+%div{:class => 'span-11'}
+  = f.input :pages
+%div{:class => 'span-11 last'}
+  = f.input :isbn
+%div{:class => 'span-11'}
+  = f.input :place_of_publication, :as => :text, :input_html => { :size => "25x2" }
+%div{:class => 'span-11 last'}
+  = f.input :publishers, :as => :text, :input_html => { :size => "25x2" }
+%div{:class => 'span-11'}
+  = f.label :edition_status_id, :class => 'my_label', :required => true
+  = f.collection_select :edition_status_id, EditionStatus.all, :id, :name

@@ -10,7 +10,6 @@
     = f.input :volume
   %div{:class => 'span-11 last'}
     = f.input :url, :as => :text, :input_html => { :size => "25x2" }
- 
   %div{:class => 'span-22 ui-buttons last'}
     = f.button :submit, :value => t(:save), :class => 'ui-state-default ui-corner-all button'
     = button_link_to t(:cancel), books_path

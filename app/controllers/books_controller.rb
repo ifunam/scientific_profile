@@ -43,7 +43,7 @@ class BooksController < ApplicationController
   def destroy
     @book = Book.find(params[:id])
     @book.destroy
-    respond_with(@book, :status => :deleted, :location => pages_url)
+    respond_with(@book, :status => :deleted, :location => books_url)
   end
 end
 

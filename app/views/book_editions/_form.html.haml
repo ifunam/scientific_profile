@@ -1,17 +1,3 @@
-%div{:class => 'span-11'}
-  = f.input :edition
+= render :partial => 'book_editions/book_edition_form', :locals => { :f => f }
 %div{:class => 'span-11 last'}
-  = f.input :year, :input_html => { :size => "4" }
-%div{:class => 'span-11'}
-  = f.input :pages
-%div{:class => 'span-11 last'}
-  = f.input :isbn
-%div{:class => 'span-11'}
-  = f.input :place_of_publication, :as => :text, :input_html => { :size => "25x2" }
-%div{:class => 'span-11 last'}
-  = f.input :publishers, :as => :text, :input_html => { :size => "25x2" }
-%div{:class => 'span-11'}
-  = f.label :edition_status_id, :class => 'my_label', :required => true
-  = f.collection_select :edition_status_id, EditionStatus.all, :id, :name
-%div{:class => 'span-11 last'}
-  = render :partial => 'documents/form', :locals => { :f => f}
+  = render :partial => 'documents/form', :locals => { :f => f }
