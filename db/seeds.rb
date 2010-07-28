@@ -43,3 +43,7 @@ end
 %w(Introducción Prefacio Prólogo Capítulo Apéndice Índice Otro).each do |name|
   ChapterType.create(:name => name)  
 end
+
+['Poster', 'Notas de clase', 'Presentación', 'Otro'].each do |name|
+  PublicationType.create(:name => name)  
+end
