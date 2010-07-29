@@ -14,7 +14,10 @@ ScientificProfile::Application.routes.draw do |map|
 
   namespace :admin do
     resources :users
-    resources :navlinks
+    resources :navlinks do
+      get :move_up, :on => :member
+      get :move_down, :on => :member
+    end
   end
 
   root :to => "user_settings#show"

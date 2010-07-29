@@ -1,8 +1,16 @@
-%div{:class => 'row span-24 last'}
-  %div{:class => 'span-17'}
-    %b= navlink.title
+- column_size = 24 - navlink.ancestors.size
+- prepend_size = navlink.ancestors.size
+%div{:class => "row span-#{column_size}  prepend-#{prepend_size} last", :id => dom_id(navlink)}
+  %div{:class => "span-#{17 - prepend_size}"}
+    - unless navlink.url.to_s.strip.empty?
+      = link_to navlink.title, navlink.url, :target => '_new'
+    - else
+      = navlink.title
   %div{:class => 'span-3'}
-    = '-'
+    = link_to_move_item(navlink).html_safe
   %div{:class => 'span-4 actions last'}
     = link_to t(:show), admin_navlink_path(:id => navlink.id)
     = link_to t(:delete), admin_navlink_path(:id => navlink.id), :method => :delete, :confirm => t(:delete_confirm_question)
+- if navlink.children.size > 0
+  - navlink.children.each do |child|
+    = render :partial => 'link', :object => child
