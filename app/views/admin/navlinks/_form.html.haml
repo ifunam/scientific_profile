@@ -1,0 +1,10 @@
+%div{:class => 'span-22 last'}
+  = f.input :title, :as => :string, :input_html => { :size => "40" }
+%div{:class => 'span-22 last'}
+  = f.input :url, :as => :string, :input_html => { :size => "80" }
+%div{:class => 'span-22 last'}
+  = f.label :parent_id
+  = f.collection_select :parent_id, Navlink.all_section_links, :id, :title_with_ancestors, :prompt => '-- Seleccione una sección --'
+%div{:class => 'span-22 ui-buttons last'}
+  = f.button :submit, :value => t(:save), :class => 'ui-state-default ui-corner-all button'
+  = button_link_to t(:cancel), admin_navlinks_path

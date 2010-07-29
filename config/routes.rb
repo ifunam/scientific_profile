@@ -14,6 +14,7 @@ ScientificProfile::Application.routes.draw do |map|
 
   namespace :admin do
     resources :users
+    resources :navlinks
   end
 
   root :to => "user_settings#show"

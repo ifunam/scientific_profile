@@ -1,0 +1,4 @@
+%div{:class => 'span-22 prepend-2 section_left last'}
+  %h2=t('.title')
+  = simple_form_for(@navlink, :url => admin_navlinks_path) do |f|
+    = render :partial => 'form', :locals => {:f => f}

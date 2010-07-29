@@ -1,0 +1,9 @@
+%div{:class => "span-24 section_left last" }
+  %h2{:style => 'text-align: left;'}=t('.title')
+  = show_for @navlink do |a|
+    = a.attribute :title
+    = a.attribute :url
+    = a.association :parent, :using => :title
+  %div{:class => 'span-22 ui-buttons last'}
+    = button_link_to t(:edit), edit_admin_navlink_path(:id => @navlink)
+    = button_link_to t(:cancel), admin_navlinks_path

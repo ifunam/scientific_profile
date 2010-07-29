@@ -117,6 +117,17 @@ es:
         title: 'Detalles de la cuenta'
       edit:
         title: 'Modificar cuenta de usuario'
+    navlinks:
+      new:
+        title: 'Agregar nueva liga en el menú principal'
+      index:
+        title: 'Administración de ligas del menú principal'    
+        move: 'Cambiar posición'
+        actions: 'Acciones'
+      show:
+        title: 'Liga'
+      edit:
+        title: 'Modificar liga en el menú principal'
 
   show_for:
     models:
@@ -174,6 +185,10 @@ es:
         description: Resumen
         year: Año
         file: Archivo
+      navlink:
+        title: Título
+        url: Página web
+        parent_id: Sección
 
   activemodel:
     models:

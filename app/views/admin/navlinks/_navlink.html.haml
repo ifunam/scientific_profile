@@ -1,0 +1,8 @@
+%div{:class => 'row span-24 last'}
+  %div{:class => 'span-17'}
+    %b= navlink.title
+  %div{:class => 'span-3'}
+    = '-'
+  %div{:class => 'span-4 actions last'}
+    = link_to t(:show), admin_navlink_path(:id => navlink.id)
+    = link_to t(:delete), admin_navlink_path(:id => navlink.id), :method => :delete, :confirm => t(:delete_confirm_question)
