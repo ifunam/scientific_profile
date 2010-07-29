@@ -51,6 +51,17 @@ es:
       status: 'Status'
       actions: 'Acciones'
 
+  publications:
+    index:
+      title: 'Publicaciones'
+      publication: 'Título de publicación'
+      file: 'Archivo'
+      actions: 'Acciones'
+    new:
+      title: 'Nueva publicación'
+    show:
+      title: 'Publicación'
+
   galleries:
     index:
       title: 'Galerías'
@@ -157,6 +168,12 @@ es:
         pages: Páginas del capítulo
         chapter_type_id: Tipo de capítulo
         file: 'Archivo'
+      publication:
+        title: Título
+        authors: Autores
+        description: Resumen
+        year: Año
+        file: Archivo
 
   activemodel:
     models:

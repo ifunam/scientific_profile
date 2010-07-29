@@ -9,6 +9,7 @@ ScientificProfile::Application.routes.draw do |map|
   resources :theses
   resources :books
   resources :book_chapters
+  resources :publications
   resource :user_settings
 
   namespace :admin do

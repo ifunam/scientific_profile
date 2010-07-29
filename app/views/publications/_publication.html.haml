@@ -1,0 +1,12 @@
+%div{:class => 'row span-24 last'}
+  %div{:class => 'span-18'}
+    = publication.as_text 
+    - unless publication.document.nil?
+      = link_to " (#{publication.document.file.file_type})",  publication.document.file.url, :target => '_new'
+
+  %div{:class => 'span-2'}
+    =  publication.publication_type.nil? ? '-' : publication.publication_type.name 
+
+  %div{:class => 'span-4 actions last'}
+    = link_to t(:show), publication_path(:id => publication.id)
+    = link_to t(:delete), publication_path(:id => publication.id), :method => :delete, :confirm => t(:delete_confirm_question)

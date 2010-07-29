@@ -1,0 +1,16 @@
+= simple_form_for(@publication, :html => {:multipart => true }) do |f|
+  %div{:class => 'span-22 last'}
+    = f.input :title, :as => :text, :input_html => { :size => "80x2" }
+  %div{:class => 'span-22 last'}
+    = f.input :authors, :as => :text, :input_html => { :size => "80x2" }
+  %div{:class => 'span-22 last'}
+    = f.input :description, :as => :text, :input_html => { :size => "80x2" }
+  %div{:class => 'span-11'}
+    = f.input :year, :input_html => { :size => "4" }, :as => :string
+  %div{:class => 'span-11 last'}
+    = f.association :publication_type
+  %div{:class => 'span-22 last'}
+    = render :partial => 'documents/form', :locals => { :f => f }
+  %div{:class => 'span-22 ui-buttons last'}
+    = f.button :submit, :value => t(:save), :class => 'ui-state-default ui-corner-all button'
+    = button_link_to t(:cancel), publications_path
