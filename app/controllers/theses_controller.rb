@@ -2,7 +2,7 @@ class ThesesController < ApplicationController
   respond_to :html
 
   def index
-    respond_with(@theses = Thesis.all.paginate(:thesis => params[:thesis] || 1, :per_page => params[:per_page] || 10))
+    respond_with(@theses = Thesis.all.paginate(:page => params[:page] || 1, :per_page => params[:per_page] || 10))
   end
 
   def show
