@@ -1,5 +1,8 @@
 %li
-  = link_to content_tag(:span, nav_parent.title), "#", :class => 'parent'
+  - unless nav_parent.url.to_s.strip.empty?
+    = link_to content_tag(:span, nav_parent.title), nav_parent.url, :class => 'parent'
+  - else
+    = link_to content_tag(:span, nav_parent.title), "#", :class => 'parent'
   %div
     %ul= render :partial => "layouts/nav_link", :collection => nav_parent.children
        

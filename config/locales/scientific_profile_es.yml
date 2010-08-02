@@ -103,6 +103,14 @@ es:
       actions: Acciones
     edit:
       title: Modificar capítulo
+  theses:
+    index:
+      title: Tesis
+      status: Estado
+      actions: Acciones
+    new:
+      title: Registrar tesis nueva
+      
       
   admin:
     users:
@@ -189,6 +197,20 @@ es:
         title: Título
         url: Página web
         parent_id: Sección
+      thesis:
+        title: Título
+        authors: Autor(es)
+        academic_level: Grado
+        career_name: Carrera
+        faculty_or_school: Facultad o Escuela
+        institution: Institución
+        start_year: Año de inicio
+        start_month: Mes de inicio
+        end_year: Año de término
+        end_month: Mes de término
+        is_finished: Esta terminada?
+        role_in_thesis_id: Actividad desempeñada
+        file: Archivo
 
   activemodel:
     models:
