@@ -1,7 +1,7 @@
 %div{:class => 'row span-24 last'}
-  %div{:class => 'span-18'}
+  %div{:class => 'span-17'}
     %b= user.email
-  %div{:class => 'span-2'}
+  %div{:class => 'span-3'}
     =  user.group.nil? ? t(:not_specified) : user.group.name 
   %div{:class => 'span-4 actions last'}
     = link_to t(:show), admin_user_path(:id => user.id)
