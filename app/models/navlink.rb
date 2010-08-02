@@ -34,6 +34,6 @@ class Navlink < ActiveRecord::Base
   end
 
   def is_parent?
-      (children.size > 0 or parent.nil? or navlinkable.nil?) and url.to_s.empty?
+      (children.size > 0 or parent.nil? or navlinkable.nil?)
   end
 end
