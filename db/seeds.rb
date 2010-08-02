@@ -2,7 +2,7 @@
   Navlink.create!(:title => title)
 end
 
-['Investigador', 'Colaboradores', 'Estudiante'].each do |name|
+['Investigadores', 'Colaboradores', 'Estudiantes'].each do |name|
   Group.create(:name => name)
 end
 
@@ -44,6 +44,6 @@ end
   ChapterType.create(:name => name)  
 end
 
-['Poster', 'Notas de clase', 'Presentación', 'Otro'].each do |name|
+['Artículos de divulgación', 'Posters', 'Notas de clase', 'Presentaciones', 'Otras'].each do |name|
   PublicationType.create(:name => name)  
 end
