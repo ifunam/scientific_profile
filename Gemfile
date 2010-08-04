@@ -15,6 +15,9 @@ gem "inploy", :git => 'git://github.com/dcrec1/inploy.git', :branch => 'master'
 gem "simple_form", :git => 'git://github.com/plataformatec/simple_form.git'
 gem "will_paginate", "3.0.pre"
 gem "i18n"
+gem 'inherited_resources', '1.1.2'
+gem "scope_by_fuzzy", :git => 'git://github.com/monsterlabs/scope_by_fuzzy.git'
+
 group :production do
   gem "pg"
 end
