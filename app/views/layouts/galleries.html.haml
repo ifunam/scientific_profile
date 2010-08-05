@@ -7,18 +7,13 @@
     %meta{:name => 'session-value', :content => cookies['_scientific_profile_session'] }
     %meta{:name => 'session-key', :content => '_scientific_profile_session' }
 
-    = stylesheet_link_tag 'screen.css', :media => 'screen, projection'
-    = stylesheet_link_tag 'print.css', :media => 'print'
-    /[if lt IE 8]
-      = stylesheet_link_tag 'ie.css', :media => 'screen, projection'
-    = stylesheet_link_tag 'application.css', :media => 'screen, projection'
-    = stylesheet_link_tag "jquery-ui/themes/start/jquery.ui.all"
-    = stylesheet_link_tag 'menu.css'
+    = render :partial => 'layouts/blueprint'
+    = render :partial => 'layouts/css_base'
+
     = stylesheet_link_tag "uploadify/uploadify"
     = stylesheet_link_tag "gallery"
 
-    = javascript_include_tag :jquery
-    = javascript_include_tag "jquery.ui/jquery-ui-1.8.1.custom"
+    = render :partial => 'layouts/js_base'
     = javascript_include_tag "uploadify/jquery.uploadify.v2.1.0.min", "uploadify/swfobject"
     = javascript_include_tag "gallery"
 
