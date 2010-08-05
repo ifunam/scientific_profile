@@ -1,0 +1,7 @@
+- # Fix It: Move this javascript chunk into application.js
+- journal_show = sanitize_html(render :partial => 'journals/record_show', :object => @journal)
+= (                                                                        |
+  "var hidden = $('#article_journal_id');" +       |
+  "hidden.val(#{@journal.id});" +                                      |
+  "$('#journal_name').html('#{journal_show}');" +                 |
+  "$('#dialog').dialog('close')").html_safe                                         |
