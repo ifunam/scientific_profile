@@ -1,16 +1,15 @@
 // Place your application-specific JavaScript functions and classes here
 // This file is automatically included by javascript_include_tag :defaults
 $(document).ready(function()    {
+
 	current_year = new Date().getFullYear();
 	start_year = current_year - 100;
 	end_year = current_year - 15;
 	$('#user_person_attributes_birthdate').datepicker({ changeYear: true, changeMonth: true, yearRange: start_year+':'+end_year, dateFormat: 'dd-mm-yy', defaultDate: '01-01-'+end_year });
-	
-	// Add markItUp! to your textarea in one line        // $('textarea').markItUp( { Settings }, { OptionalExtraSettings } );
+
+
 	$('#page_body').markItUp(mySettings);
 
-	// You can add content from anywhere in your page
-	// $.markItUp( { Settings } );  
 	$('.add').click(function() {
 		$.markItUp( { 
 			openWith:'<opening tag>',
@@ -18,14 +17,11 @@ $(document).ready(function()    {
 			placeHolder:"New content"
 		}
 	);
-	
 
 	return false;
-});
+   });
 
-// And you can add/remove markItUp! whenever you want
-// $(textarea).markItUpRemove();
-$('.toggle').click(function() {
+   $('.toggle').click(function() {
 	if ($("#page_body.markItUpEditor").length === 1) {
 		$("#page_body").markItUpRemove();
 		$("span", this).text("get markItUp! back");
@@ -34,5 +30,6 @@ $('.toggle').click(function() {
 		$("span", this).text("remove markItUp!");
 	}
 	return false;
-});
+   });
+
 });
