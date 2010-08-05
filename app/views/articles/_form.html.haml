@@ -4,7 +4,13 @@
   %div{:class => 'span-22 last'}
     = f.input :authors, :as => :text, :input_html => { :size => "80x2" }
   %div{:class => 'span-11'}
-    = f.association :journal
+    = f.label :journal
+    %div{:id => 'journal_name'}
+      - if f.object.journal.nil?
+        = render :partial => 'journals/autocomplete_search'
+      - else
+        = render :partial => 'journals/record_show', :object => f.object.journal
+    = f.hidden_field :journal_id
   %div{:class => 'span-11 last'}
     = f.association :article_status
   %div{:class => 'span-11'}
